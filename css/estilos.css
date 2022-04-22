@@ -25,6 +25,10 @@ a{
     
 }
 
+.col-sm-3 a{
+  color: #000000;
+}
+
 h4{
     font-family: 'impact';
     font-size: medium;
@@ -203,4 +207,71 @@ li{
   .wrapper .row{
     margin: 10px 0;
   }
+}
+
+@media(max-width: 320px){
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon{
+    display: none;
+  }
+  .wrapper .row{
+    margin: 10px 0;
+  }
+}
+/* Tema oscuro */
+.switch {
+  background: #27286bf6;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch span{
+  width: 30px;
+  height: 30px;
+  line-height:30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.switch ::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active{
+  background: #c2ab9b;
+  color: #000000;
+}
+
+.switch.active ::after{
+    right: 0;
+    left: unset;
+}
+
+body.dark{
+  background: #29292b;
+}
+
+.dark .col-sm-12{
+  color: rgb(240, 235, 235);
+}
+
+.dark h1, h2{
+  color: black;
 }
